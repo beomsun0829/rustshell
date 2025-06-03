@@ -13,7 +13,7 @@ fn main() {
         let command = parts.next().unwrap();
         let args = parts;
 
-        let mut child = Command::new(command).spawn().unwrap();
+        let mut child = Command::new(command).args(args).spawn().unwrap();
         let _ = child.wait();
     }
 }
